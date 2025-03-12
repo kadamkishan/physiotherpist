@@ -142,7 +142,7 @@ export default function Home() {
         <title>Dr. Kushal Wani - Physiotherapist</title>
         <meta
           name="description"
-          content="Professional portfolio of Dr. Kushal Vani, experienced physiotherapist"
+          content="Professional portfolio of Dr. Kushal Wani, experienced physiotherapist"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -154,7 +154,7 @@ export default function Home() {
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
                 <span className="text-xl font-bold text-blue-600">
-                  Dr. Kushal Vani
+                  Dr. Kushal Wani
                 </span>
               </div>
             </div>
@@ -287,7 +287,7 @@ export default function Home() {
             <div className="lg:col-span-6 xl:col-span-6">
               <div className="text-center lg:text-left md:max-w-2xl md:mx-auto lg:mx-0">
                 <h1 className="text-4xl tracking-tight font-bold text-gray-900 sm:text-5xl md:text-6xl">
-                  <span className="block">Dr. Kushal Vani</span>
+                  <span className="block">Dr. Kushal Wani</span>
                   <span className="block text-blue-600 mt-1">
                     Physiotherapist
                   </span>
@@ -315,7 +315,7 @@ export default function Home() {
                         <div className="relative w-full h-full">
                           <Image
                             src={heroImage}
-                            alt="Dr. Kushal Vani"
+                            alt="Dr. Kushal Wani"
                             width={500}
                             height={200}
                             className="w-full h-full object-center rounded-lg"
@@ -357,7 +357,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              About Dr. Kushal Vani
+              About Dr. Kushal Wani
             </h2>
             <p className="mt-4 text-lg text-gray-500 max-w-3xl mx-auto">
               Dedicated physiotherapist with a passion for helping patients
@@ -373,7 +373,7 @@ export default function Home() {
                     <div className="relative w-full h-full">
                       <Image
                         src={profileImage}
-                        alt="Dr. Kushal Vani Profile"
+                        alt="Dr. Kushal Wani Profile"
                         className="w-full h-full object-center rounded-lg"
                       />
                     </div>
@@ -401,7 +401,7 @@ export default function Home() {
                 Educational Background
               </h3>
               <p className="mt-3 text-lg text-gray-500">
-                Dr. Kushal Vani holds a Bachelor&apos;s degree in Physiotherapy from
+                Dr. Kushal Wani holds a Bachelor&apos;s degree in Physiotherapy from
                 a prestigious medical institution, followed by specialized
                 training in sports rehabilitation and orthopedic physiotherapy.
               </p>
@@ -411,7 +411,7 @@ export default function Home() {
                   Professional Experience
                 </h3>
                 <p className="mt-3 text-lg text-gray-500">
-                  With 2 years of hands-on experience, Dr. Vani has worked with
+                  With 2 years of hands-on experience, Dr. Wani has worked with
                   patients of all ages, helping them recover from injuries,
                   surgeries, and chronic conditions. His approach combines
                   evidence-based techniques with personalized care plans.
@@ -651,7 +651,7 @@ export default function Home() {
               </div>
               <p className="text-gray-600">
                 `After years of chronic back pain, I finally found relief
-                through Dr. Vani&apos;s treatment. His holistic approach addressed
+                through Dr. Wani&apos;s treatment. His holistic approach addressed
                 not just my pain but also improved my overall mobility and
                 quality of life.`
               </p>
@@ -682,7 +682,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-              Contact Dr. Kushal Vani
+              Contact Dr. Kushal Wani
             </h2>
             <p className="mt-4 text-lg text-gray-500 max-w-3xl mx-auto">
               Have questions or ready to schedule an appointment? Reach out
