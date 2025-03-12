@@ -76,8 +76,8 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
-  const [heroImage, setHeroImage] = useState(null);
-  const [profileImage, setProfileImage] = useState(null);
+  const heroImage = require('../../public/KushalWaniImage.jpeg')
+  const profileImage = require('../../public/kushal-personal-image.png')
 
   useEffect(() => {
     // Set initial window width
@@ -311,69 +311,16 @@ export default function Home() {
                 <div className="relative mx-auto w-full max-w-md lg:max-w-full">
                   <div className="aspect-w-6 aspect-h-5 rounded-lg shadow-xl overflow-hidden">
                     <div className="w-full h-96">
-                      {heroImage ? (
+                    
                         <div className="relative w-full h-full">
-                          <img
+                          <Image
                             src={heroImage}
                             alt="Dr. Kushal Vani"
-                            className="w-full h-full object-cover rounded-lg"
+                            width={500}
+                            height={200}
+                            className="w-full h-full object-center rounded-lg"
                           />
-                          <button
-                            onClick={() =>
-                              document.getElementById("heroImageInput").click()
-                            }
-                            className="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700 transition duration-300"
-                          >
-                            Change Image
-                          </button>
                         </div>
-                      ) : (
-                        <div
-                          onClick={() =>
-                            document.getElementById("heroImageInput").click()
-                          }
-                          className="w-full h-full flex items-center justify-center bg-gray-200 rounded-lg cursor-pointer hover:bg-gray-300 transition duration-300"
-                        >
-                          <div className="text-center p-4">
-                            <svg
-                              className="mx-auto h-12 w-12 text-gray-400"
-                              stroke="currentColor"
-                              fill="none"
-                              viewBox="0 0 48 48"
-                              aria-hidden="true"
-                            >
-                              <path
-                                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4h-12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                                strokeWidth={2}
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                              />
-                            </svg>
-                            <p className="mt-2 text-sm font-medium text-gray-900">
-                              Upload Doctor's Photo
-                            </p>
-                            <p className="mt-1 text-xs text-gray-500">
-                              PNG, JPG, GIF up to 10MB
-                            </p>
-                          </div>
-                        </div>
-                      )}
-                      <input
-                        id="heroImageInput"
-                        type="file"
-                        className="hidden"
-                        accept="image/*"
-                        onChange={(e) => {
-                          const file = e.target.files[0];
-                          if (!file) return;
-
-                          const reader = new FileReader();
-                          reader.onload = () => {
-                            setHeroImage(reader.result);
-                          };
-                          reader.readAsDataURL(file);
-                        }}
-                      />
                     </div>
                   </div>
                 </div>
@@ -422,53 +369,14 @@ export default function Home() {
             <div className="relative lg:row-start-1 lg:col-start-2">
               <div className="aspect-w-3 aspect-h-2 rounded-lg shadow-lg overflow-hidden">
                 <div className="w-full h-96">
-                  {profileImage ? (
+                
                     <div className="relative w-full h-full">
-                      <img
+                      <Image
                         src={profileImage}
                         alt="Dr. Kushal Vani Profile"
-                        className="w-full h-full object-cover rounded-lg"
+                        className="w-full h-full object-center rounded-lg"
                       />
-                      <button
-                        onClick={() =>
-                          document.getElementById("profileImageInput").click()
-                        }
-                        className="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700 transition duration-300"
-                      >
-                        Change Image
-                      </button>
                     </div>
-                  ) : (
-                    <div
-                      onClick={() =>
-                        document.getElementById("profileImageInput").click()
-                      }
-                      className="w-full h-full flex items-center justify-center bg-gray-200 rounded-lg cursor-pointer hover:bg-gray-300 transition duration-300"
-                    >
-                      <div className="text-center p-4">
-                        <svg
-                          className="mx-auto h-12 w-12 text-gray-400"
-                          stroke="currentColor"
-                          fill="none"
-                          viewBox="0 0 48 48"
-                          aria-hidden="true"
-                        >
-                          <path
-                            d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4h-12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                            strokeWidth={2}
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          />
-                        </svg>
-                        <p className="mt-2 text-sm font-medium text-gray-900">
-                          Upload Profile Photo
-                        </p>
-                        <p className="mt-1 text-xs text-gray-500">
-                          PNG, JPG, GIF up to 10MB
-                        </p>
-                      </div>
-                    </div>
-                  )}
                   <input
                     id="profileImageInput"
                     type="file"
@@ -812,8 +720,37 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-3 text-base text-gray-500">
-                    <p>123 Health Avenue, Medical District</p>
-                    <p className="mt-1">City, State 123456</p>
+                    <p>Reehab Physiotherapist and fitness center</p>
+                    <p className="mt-1">Bramha Suncity Pune </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <svg
+                      className="h-6 w-6 text-blue-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                      ></path>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div className="ml-3 text-base text-gray-500">
+                    <p>The Pune Physiotherapy clinic Pune</p>
+                    {/* <p className="mt-1">Pune</p> */}
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -834,7 +771,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-3 text-base text-gray-500">
-                    <p>+91 123 456 7890</p>
+                    <p>+91 7767085921</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -855,7 +792,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-3 text-base text-gray-500">
-                    <p>dr.kushalvani@example.com</p>
+                    <p>drkushalwani@gmail.com</p>
                   </div>
                 </div>
               </div>
