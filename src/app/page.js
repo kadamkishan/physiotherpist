@@ -3,71 +3,71 @@
 import React from "react";
 
 // ImageUploader Component - Can be placed in a separate file: components/ImageUploader.js
-const ImageUploader = ({ onImageSelect, label = "Upload Image" }) => {
-  const [previewUrl, setPreviewUrl] = React.useState(null);
+// const ImageUploader = ({ onImageSelect, label = "Upload Image" }) => {
+//   const [previewUrl, setPreviewUrl] = React.useState(null);
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
+//   const handleFileChange = (e) => {
+//     const file = e.target.files[0];
+//     if (!file) return;
 
-    const reader = new FileReader();
-    reader.onload = () => {
-      setPreviewUrl(reader.result);
-      if (onImageSelect) onImageSelect(reader.result);
-    };
-    reader.readAsDataURL(file);
-  };
+//     const reader = new FileReader();
+//     reader.onload = () => {
+//       setPreviewUrl(reader.result);
+//       if (onImageSelect) onImageSelect(reader.result);
+//     };
+//     reader.readAsDataURL(file);
+//   };
 
-  return (
-    <div className="relative w-full h-full">
-      {previewUrl ? (
-        <div className="relative w-full h-full">
-          <img
-            src={previewUrl}
-            alt="Uploaded preview"
-            className="w-full h-full object-cover rounded-lg"
-          />
-          <button
-            onClick={() => document.getElementById("fileInput").click()}
-            className="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700 transition duration-300"
-          >
-            Change Image
-          </button>
-        </div>
-      ) : (
-        <div
-          onClick={() => document.getElementById("fileInput").click()}
-          className="w-full h-full flex items-center justify-center bg-gray-200 rounded-lg cursor-pointer hover:bg-gray-300 transition duration-300"
-        >
-          <div className="text-center">
-            <svg
-              className="mx-auto h-12 w-12 text-gray-400"
-              stroke="currentColor"
-              fill="none"
-              viewBox="0 0 48 48"
-              aria-hidden="true"
-            >
-              <path
-                d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4h-12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <p className="mt-2 text-sm text-gray-600">{label}</p>
-          </div>
-        </div>
-      )}
-      <input
-        id="fileInput"
-        type="file"
-        className="hidden"
-        accept="image/*"
-        onChange={handleFileChange}
-      />
-    </div>
-  );
-};
+//   return (
+//     <div className="relative w-full h-full">
+//       {previewUrl ? (
+//         <div className="relative w-full h-full">
+//           <img
+//             src={previewUrl}
+//             alt="Uploaded preview"
+//             className="w-full h-full object-cover rounded-lg"
+//           />
+//           <button
+//             onClick={() => document.getElementById("fileInput").click()}
+//             className="absolute bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-700 transition duration-300"
+//           >
+//             Change Image
+//           </button>
+//         </div>
+//       ) : (
+//         <div
+//           onClick={() => document.getElementById("fileInput").click()}
+//           className="w-full h-full flex items-center justify-center bg-gray-200 rounded-lg cursor-pointer hover:bg-gray-300 transition duration-300"
+//         >
+//           <div className="text-center">
+//             <svg
+//               className="mx-auto h-12 w-12 text-gray-400"
+//               stroke="currentColor"
+//               fill="none"
+//               viewBox="0 0 48 48"
+//               aria-hidden="true"
+//             >
+//               <path
+//                 d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4h-12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+//                 strokeWidth={2}
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//               />
+//             </svg>
+//             <p className="mt-2 text-sm text-gray-600">{label}</p>
+//           </div>
+//         </div>
+//       )}
+//       <input
+//         id="fileInput"
+//         type="file"
+//         className="hidden"
+//         accept="image/*"
+//         onChange={handleFileChange}
+//       />
+//     </div>
+//   );
+// };
 import { useState, useEffect } from "react";
 import Head from "next/head";
 import Image from "next/image";
@@ -401,7 +401,7 @@ export default function Home() {
                 Educational Background
               </h3>
               <p className="mt-3 text-lg text-gray-500">
-                Dr. Kushal Vani holds a Bachelor's degree in Physiotherapy from
+                Dr. Kushal Vani holds a Bachelor&apos;s degree in Physiotherapy from
                 a prestigious medical institution, followed by specialized
                 training in sports rehabilitation and orthopedic physiotherapy.
               </p>
@@ -423,10 +423,10 @@ export default function Home() {
                   Philosophy of Care
                 </h3>
                 <p className="mt-3 text-lg text-gray-500">
-                  "My goal is to not only treat the symptoms but to address the
-                  root cause of my patients' pain and discomfort. I believe in
+                  `My goal is to not only treat the symptoms but to address the
+                  root cause of my patients pain and discomfort. I believe in
                   empowering patients through education and personalized
-                  exercise programs for long-term wellness."
+                  exercise programs for long-term wellness.`
                 </p>
               </div>
             </div>
@@ -633,10 +633,10 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "Dr. Kushal's expertise in sports rehabilitation helped me
+                `Dr. Kushal&apos;s expertise in sports rehabilitation helped me
                 recover from a severe ankle sprain in record time. His
                 personalized treatment plan and constant support made all the
-                difference."
+                difference.`
               </p>
             </div>
 
@@ -650,10 +650,10 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "After years of chronic back pain, I finally found relief
-                through Dr. Vani's treatment. His holistic approach addressed
+                `After years of chronic back pain, I finally found relief
+                through Dr. Vani&apos;s treatment. His holistic approach addressed
                 not just my pain but also improved my overall mobility and
-                quality of life."
+                quality of life.`
               </p>
             </div>
 
@@ -667,10 +667,10 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-600">
-                "Following my knee replacement surgery, Dr. Kushal's
+                `Following my knee replacement surgery, Dr. Kushal&apos;s
                 rehabilitation program was crucial to my recovery. His patience
                 and encouragement helped me stay motivated throughout the
-                process."
+                process.`
               </p>
             </div>
           </div>
