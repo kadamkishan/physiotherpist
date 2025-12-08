@@ -76,8 +76,8 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("home");
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [windowWidth, setWindowWidth] = useState(0);
-  const heroImage = require('../../public/KushalWaniImage.jpeg')
-  const profileImage = require('../../public/kushal-personal-image.png')
+  const heroImage = require('../../public/images/HeadPhoto/index.jpg')
+  const profileImage = require('../../public/images/AboutPhoto/index.png')
 
   useEffect(() => {
     // Set initial window width
@@ -335,7 +335,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="bg-blue-50 p-8 rounded-lg text-center">
-              <h3 className="text-5xl font-bold text-blue-600">2+</h3>
+              <h3 className="text-5xl font-bold text-blue-600">5+</h3>
               <p className="mt-2 text-lg text-gray-700">Years Experience</p>
             </div>
             <div className="bg-blue-50 p-8 rounded-lg text-center">
@@ -411,7 +411,7 @@ export default function Home() {
                   Professional Experience
                 </h3>
                 <p className="mt-3 text-lg text-gray-500">
-                  With 2 years of hands-on experience, Dr. Wani has worked with
+                  With 5 years of hands-on experience, Dr. Wani has worked with
                   patients of all ages, helping them recover from injuries,
                   surgeries, and chronic conditions. His approach combines
                   evidence-based techniques with personalized care plans.
