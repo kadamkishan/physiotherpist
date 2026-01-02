@@ -153,7 +153,7 @@ export default function Home() {
           <div className="flex justify-between h-16">
             <div className="flex">
               <div className="flex-shrink-0 flex items-center">
-                <span className="text-xl font-bold text-blue-600">
+                <span className="text-lg sm:text-xl font-bold text-blue-600">
                   Dr. Kushal Wani
                 </span>
               </div>
@@ -281,7 +281,7 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="pt-20 lg:pt-32">
+      <section id="home" className="pt-24 lg:pt-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-12 lg:gap-8">
             <div className="lg:col-span-6 xl:col-span-6">
@@ -299,7 +299,7 @@ export default function Home() {
                 <div className="mt-8 sm:mt-12">
                   <button
                     onClick={() => scrollToSection("contact")}
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-md shadow-md transition duration-300"
+                    className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-md shadow-md transition duration-300"
                   >
                     Book an Appointment
                   </button>
@@ -310,7 +310,7 @@ export default function Home() {
               <div className="lg:flex lg:justify-end">
                 <div className="relative mx-auto w-full max-w-md lg:max-w-full">
                   <div className="aspect-w-6 aspect-h-5 rounded-lg shadow-xl overflow-hidden">
-                    <div className="w-full h-96">
+                    <div className="w-full h-64 sm:h-80 lg:h-96">
                     
                         <div className="relative w-full h-full">
                           <Image
@@ -331,20 +331,20 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="bg-white py-16 mt-16">
+      <section className="bg-white py-12 sm:py-16 mt-12 sm:mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             <div className="bg-blue-50 p-8 rounded-lg text-center">
-              <h3 className="text-5xl font-bold text-blue-600">5+</h3>
-              <p className="mt-2 text-lg text-gray-700">Years Experience</p>
+              <h3 className="text-4xl sm:text-5xl font-bold text-blue-600">5+</h3>
+              <p className="mt-2 text-base sm:text-lg text-gray-700">Years Experience</p>
             </div>
             <div className="bg-blue-50 p-8 rounded-lg text-center">
-              <h3 className="text-5xl font-bold text-blue-600">100+</h3>
-              <p className="mt-2 text-lg text-gray-700">Happy Patients</p>
+              <h3 className="text-4xl sm:text-5xl font-bold text-blue-600">100+</h3>
+              <p className="mt-2 text-base sm:text-lg text-gray-700">Happy Patients</p>
             </div>
             <div className="bg-blue-50 p-8 rounded-lg text-center">
-              <h3 className="text-5xl font-bold text-blue-600">5</h3>
-              <p className="mt-2 text-lg text-gray-700">
+              <h3 className="text-4xl sm:text-5xl font-bold text-blue-600">5</h3>
+              <p className="mt-2 text-base sm:text-lg text-gray-700">
                 Specialized Treatments
               </p>
             </div>
@@ -368,15 +368,17 @@ export default function Home() {
           <div className="mt-16 lg:grid lg:grid-cols-2 lg:gap-12">
             <div className="relative lg:row-start-1 lg:col-start-2">
               <div className="aspect-w-3 aspect-h-2 rounded-lg shadow-lg overflow-hidden">
-                <div className="w-full h-96">
+                <div className="w-full h-64 sm:h-80 lg:h-96">
                 
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={profileImage}
-                        alt="Dr. Kushal Wani Profile"
-                        className="w-full h-full object-center rounded-lg"
-                      />
-                    </div>
+                    <div className="relative w-full max-w-md aspect-[5/6] rounded-xl overflow-hidden bg-gray-100 shadow-lg">
+  <Image
+    src={profileImage}
+    alt="Dr. Kushal Wani Profile"
+    fill
+    className="object-contain"
+    priority
+  />
+</div>
                   <input
                     id="profileImageInput"
                     type="file"
@@ -447,9 +449,9 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-12 sm:mt-16 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Service 1 */}
-            <div className="bg-gray-50 rounded-lg p-8 shadow-md">
+            <div className="bg-gray-50 rounded-lg p-6 sm:p-8 shadow-md">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-blue-600"
@@ -466,17 +468,17 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                 Sports Rehabilitation
               </h3>
-              <p className="mt-4 text-gray-500">
+              <p className="mt-3 sm:mt-4 text-gray-500">
                 Specialized treatment for sports-related injuries, helping
                 athletes return to their peak performance safely.
               </p>
             </div>
 
             {/* Service 2 */}
-            <div className="bg-gray-50 rounded-lg p-8 shadow-md">
+            <div className="bg-gray-50 rounded-lg p-6 sm:p-8 shadow-md">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-blue-600"
@@ -493,17 +495,17 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                 Orthopedic Physiotherapy
               </h3>
-              <p className="mt-4 text-gray-500">
+              <p className="mt-3 sm:mt-4 text-gray-500">
                 Treatment for musculoskeletal conditions affecting bones,
                 joints, muscles, and soft tissues.
               </p>
             </div>
 
             {/* Service 3 */}
-            <div className="bg-gray-50 rounded-lg p-8 shadow-md">
+            <div className="bg-gray-50 rounded-lg p-6 sm:p-8 shadow-md">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-blue-600"
@@ -520,17 +522,17 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                 Neurological Rehabilitation
               </h3>
-              <p className="mt-4 text-gray-500">
+              <p className="mt-3 sm:mt-4 text-gray-500">
                 Specialized care for patients with neurological conditions to
                 improve function and quality of life.
               </p>
             </div>
 
             {/* Service 4 */}
-            <div className="bg-gray-50 rounded-lg p-8 shadow-md">
+            <div className="bg-gray-50 rounded-lg p-6 sm:p-8 shadow-md">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-blue-600"
@@ -547,17 +549,17 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                 Pain Management
               </h3>
-              <p className="mt-4 text-gray-500">
+              <p className="mt-3 sm:mt-4 text-gray-500">
                 Evidence-based approaches to reduce pain and improve function
                 through manual therapy and targeted exercises.
               </p>
             </div>
 
             {/* Service 5 */}
-            <div className="bg-gray-50 rounded-lg p-8 shadow-md">
+            <div className="bg-gray-50 rounded-lg p-6 sm:p-8 shadow-md">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-blue-600"
@@ -574,17 +576,17 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                 Geriatric Physiotherapy
               </h3>
-              <p className="mt-4 text-gray-500">
+              <p className="mt-3 sm:mt-4 text-gray-500">
                 Specialized care for elderly patients focusing on mobility,
                 balance, and overall physical function.
               </p>
             </div>
 
             {/* Service 6 */}
-            <div className="bg-gray-50 rounded-lg p-8 shadow-md">
+            <div className="bg-gray-50 rounded-lg p-6 sm:p-8 shadow-md">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
                 <svg
                   className="w-6 h-6 text-blue-600"
@@ -601,10 +603,10 @@ export default function Home() {
                   ></path>
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-gray-900">
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900">
                 Post-Surgical Rehabilitation
               </h3>
-              <p className="mt-4 text-gray-500">
+              <p className="mt-3 sm:mt-4 text-gray-500">
                 Structured programs to help patients recover effectively after
                 surgeries and regain their independence.
               </p>
@@ -622,13 +624,17 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="mt-16 grid gap-8 lg:grid-cols-3">
+          <div className="mt-12 sm:mt-16 grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
             {/* Testimonial 1 */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+               <div className="w-12 h-12 flex items-center justify-center 
+                  bg-orange-600 text-white font-semibold 
+                  rounded-full uppercase">
+                  KK
+                </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-bold">Rajesh Kumar</h4>
+                  <h4 className="text-lg font-bold text-black">Kishan Kadam</h4>
                   <p className="text-gray-500">Sports Injury</p>
                 </div>
               </div>
@@ -641,11 +647,15 @@ export default function Home() {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+                <div className="w-12 h-12 flex items-center justify-center 
+                  bg-yellow-500 text-white font-semibold 
+                  rounded-full uppercase">
+                  AG
+                </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-bold">Priya Sharma</h4>
+                  <h4 className="text-lg font-bold text-black">Akash Gade</h4>
                   <p className="text-gray-500">Back Pain</p>
                 </div>
               </div>
@@ -658,11 +668,15 @@ export default function Home() {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gray-300 rounded-full"></div>
+            <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md">
+              <div className="flex items-center mb-4 text-black">
+                <div className="w-12 h-12 flex items-center justify-center 
+                  bg-indigo-400 text-white font-semibold 
+                  rounded-full uppercase">
+                  SK
+                </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-bold">Amir Khan</h4>
+                  <h4 className="text-lg font-bold">Sachin Kadam</h4>
                   <p className="text-gray-500">Post-Surgery</p>
                 </div>
               </div>
@@ -690,40 +704,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="mt-16 lg:grid lg:grid-cols-2 lg:gap-8">
+          <div className="mt-12 sm:mt-16 lg:grid lg:grid-cols-2 lg:gap-8">
             <div>
               <h3 className="text-xl font-bold text-gray-900">
                 Clinic Information
               </h3>
               <div className="mt-6 space-y-4">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <svg
-                      className="h-6 w-6 text-blue-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      ></path>
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      ></path>
-                    </svg>
-                  </div>
-                  <div className="ml-3 text-base text-gray-500">
-                    <p>Reehab Physiotherapist and fitness center</p>
-                    <p className="mt-1">Bramha Suncity Pune </p>
-                  </div>
-                </div>
 
                 <div className="flex items-start">
                   <div className="flex-shrink-0">
@@ -749,7 +735,7 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-3 text-base text-gray-500">
-                    <p>The Pune Physiotherapy clinic Pune</p>
+                    <p>The Pune Physiotherapy clinic, Pune</p>
                     {/* <p className="mt-1">Pune</p> */}
                   </div>
                 </div>
@@ -771,7 +757,12 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-3 text-base text-gray-500">
-                    <p>+91 7767085921</p>
+                    <a
+                      href="tel:+917767085921"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
+                      +91 7767085921
+                    </a>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -792,7 +783,12 @@ export default function Home() {
                     </svg>
                   </div>
                   <div className="ml-3 text-base text-gray-500">
-                    <p>drkushalwani@gmail.com</p>
+                    <a
+                      href="mailto:drkushalwani@gmail.com"
+                      className="text-blue-600 hover:text-blue-700"
+                    >
+                      drkushalwani@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
@@ -802,17 +798,17 @@ export default function Home() {
               </h3>
               <div className="mt-6 border-t border-b border-gray-200 py-6">
                 <div className="space-y-4">
-                  <div className="flex justify-between">
-                    <p className="text-base text-gray-500">Monday - Friday</p>
-                    <p className="text-base text-gray-500">9:00 AM - 7:00 PM</p>
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+                    <p className="text-sm sm:text-base text-gray-500">Monday - Friday</p>
+                    <p className="text-sm sm:text-base text-gray-500">9:00 AM - 7:00 PM</p>
+                </div>
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+                    <p className="text-sm sm:text-base text-gray-500">Saturday</p>
+                    <p className="text-sm sm:text-base text-gray-500">9:00 AM - 5:00 PM</p>
                   </div>
-                  <div className="flex justify-between">
-                    <p className="text-base text-gray-500">Saturday</p>
-                    <p className="text-base text-gray-500">9:00 AM - 5:00 PM</p>
-                  </div>
-                  <div className="flex justify-between">
-                    <p className="text-base text-gray-500">Sunday</p>
-                    <p className="text-base text-gray-500">Closed</p>
+                  <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-1">
+                    <p className="text-sm sm:text-base text-gray-500">Sunday</p>
+                    <p className="text-sm sm:text-base text-gray-500">Closed</p>
                   </div>
                 </div>
               </div>
@@ -825,38 +821,22 @@ export default function Home() {
               <form className="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <label
-                    htmlFor="first-name"
+                    htmlFor="full-name"
                     className="block text-sm font-medium text-gray-700"
                   >
-                    First name
+                    Full name
                   </label>
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="first-name"
-                      id="first-name"
+                      name="full-name"
+                      id="full-name"
                       autoComplete="given-name"
                       className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
                     />
                   </div>
                 </div>
-                <div>
-                  <label
-                    htmlFor="last-name"
-                    className="block text-sm font-medium text-gray-700"
-                  >
-                    Last name
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type="text"
-                      name="last-name"
-                      id="last-name"
-                      autoComplete="family-name"
-                      className="py-3 px-4 block w-full shadow-sm focus:ring-blue-500 focus:border-blue-500 border-gray-300 rounded-md"
-                    />
-                  </div>
-                </div>
+  
                 <div className="sm:col-span-2">
                   <label
                     htmlFor="email"
