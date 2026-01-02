@@ -371,14 +371,14 @@ export default function Home() {
                 <div className="w-full h-64 sm:h-80 lg:h-96">
                 
                     <div className="relative w-full max-w-md aspect-[5/6] rounded-xl overflow-hidden bg-gray-100 shadow-lg">
-  <Image
-    src={profileImage}
-    alt="Dr. Kushal Wani Profile"
-    fill
-    className="object-contain"
-    priority
-  />
-</div>
+                    <Image
+                      src={profileImage}
+                      alt="Dr. Kushal Wani Profile"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
                   <input
                     id="profileImageInput"
                     type="file"
